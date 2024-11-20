@@ -336,7 +336,7 @@ export default {
         const updatePromises = pedidosSeleccionados.map(pedido =>
           axios.put(`${apiUrl.value}/api/pedidoruta/${pedido.id}`, {
             ruta_id: rutaId,
-            estado: 'en proceso'
+            estado: 'pendiente'
           })
         );
 
@@ -476,7 +476,7 @@ export default {
 
         await axios.put(`${apiUrl.value}/api/pedidoruta/${pedido.id}`, {
           ruta_id: rutaIdLastPublica.value,
-          estado: 'en proceso'
+          estado: 'pendiente'
         });
 
         showMessage(`Pedido ${pedido.id} agregado a la ruta`);
