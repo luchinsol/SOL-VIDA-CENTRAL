@@ -142,6 +142,43 @@
             </v-card>
         </v-col>
     </v-row>
+    
+
+    <v-row>
+        <v-col cols="6" class="alineartexto">
+            <p> Pedidos Entregados en Total</p>
+        </v-col>
+        <v-col cols="6" class="alineartexto">
+            <p>Pedidos Entregados del Mes</p>
+        </v-col>
+        <v-col cols="6" class="alineartexto">
+            <p>Pedidos Entregados del Día</p>
+        </v-col>
+    </v-row>
+
+    <v-row>
+        <v-col cols="4">
+            <v-card elevation="8">
+                <v-data-table class="tablacond" :headers="headersConductores" :items="conductores" item-key="id"
+                    items-per-page="2"></v-data-table>
+            </v-card>
+        </v-col>
+
+        <v-col cols="4">
+            <v-card elevation="8">
+                <v-data-table class="tablacond" :headers="headersConductores" :items="conductores" item-key="id"
+                    items-per-page="2"></v-data-table>
+            </v-card>
+        </v-col>
+
+
+        <v-col cols="4">
+            <v-card elevation="8">
+                <v-data-table class="tablacond" :headers="headersPedidos" :items="pedidosAceptados" item-key="id"
+                    items-per-page="2"></v-data-table>
+            </v-card>
+        </v-col>
+    </v-row>
 
 </template>
 
